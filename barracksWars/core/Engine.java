@@ -51,7 +51,7 @@ public class Engine implements Runnable {
 		String result = "Invalid command";
 
 		commandName = Character.toUpperCase(commandName.charAt(0)) + commandName.substring(1);
-	
+
 		try {
 			Class<? extends Executable> clazz = (Class<? extends Executable>) Class.forName(COMMANDS_PACKAGE_PATH + commandName);
 			Constructor<? extends Executable> ctor = clazz.getDeclaredConstructor(
